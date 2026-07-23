@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #0d0221 0%, #1a0a3e 30%, #0f0a2e 60%, #050015 100%);
+  background-attachment: fixed;
+  color: #e0e0e0;
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse 800px 600px at 10% 20%, rgba(255, 107, 107, 0.08) 0%, transparent 40%),
+    radial-gradient(ellipse 600px 500px at 90% 70%, rgba(107, 199, 127, 0.06) 0%, transparent 40%),
+    radial-gradient(ellipse 700px 400px at 50% 10%, rgba(253, 217, 61, 0.04) 0%, transparent 35%);
   pointer-events: none;
+  z-index: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.app-header {
+  padding: 50px 20px;
+  background: linear-gradient(180deg, rgba(20, 10, 50, 0.95) 0%, rgba(15, 8, 35, 0.9) 100%);
+  border-bottom: 1px solid rgba(255, 107, 107, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 107, 0.4), transparent);
+}
+
+.app-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 107, 0.2), transparent);
+}
+
+.app-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8c42 50%, #ffd93d 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+.app-header p {
+  font-size: 0.85rem;
+  color: #9a8fb8;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+
+.app-main {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(180deg, rgba(15, 8, 35, 0.9) 0%, rgba(20, 10, 50, 0.95) 100%);
+  border-top: 1px solid rgba(255, 107, 107, 0.15);
+  color: #888;
+  font-size: 0.9rem;
+  box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.5), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .app-header p {
+    font-size: 0.75rem;
+  }
+
+  .app-main {
+    padding: 20px 15px;
   }
 }
