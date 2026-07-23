@@ -6,8 +6,11 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(180deg, #0d0221 0%, #1a0a3e 30%, #0f0a2e 60%, #050015 100%);
+background-image: url('../public/background.jpg');
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   color: #e0e0e0;
   min-height: 100vh;
   position: relative;
@@ -20,13 +23,11 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(ellipse 800px 600px at 10% 20%, rgba(255, 107, 107, 0.08) 0%, transparent 40%),
-    radial-gradient(ellipse 600px 500px at 90% 70%, rgba(107, 199, 127, 0.06) 0%, transparent 40%),
-    radial-gradient(ellipse 700px 400px at 50% 10%, rgba(253, 217, 61, 0.04) 0%, transparent 35%);
+  background: linear-gradient(180deg, rgba(13, 2, 33, 0.5) 0%, rgba(26, 10, 62, 0.4) 30%, rgba(15, 10, 46, 0.45) 60%, rgba(5, 0, 21, 0.6) 100%);
   pointer-events: none;
   z-index: 0;
 }
+
 
 .app {
   min-height: 100vh;
