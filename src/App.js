@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import movieMoodLogo from './assets/images/icons/movie-mood-logo.png';
 import MoodSelector from './components/MoodSelector';
 import SearchBar from './components/SearchBar';
 import MovieGrid from './components/MovieGrid';
@@ -33,7 +34,10 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>🎬 Movie Mood</h1>
+        <div className="app-header-content">
+          <img src={movieMoodLogo} alt="Movie Mood" className="app-logo" />
+          <h1>Movie Mood</h1>
+        </div>
         <p>Discover movies based on your vibe</p>
       </header>
 
@@ -47,7 +51,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>Powered by The Movie Database (TMDb)</p>
+        <p>Movie Mood © 2026 | Powered by TMDb | Built by Tefo Komane</p>
       </footer>
     </div>
   );
